@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26255959-C18D-48DD-B828-02C2BE95AB7F}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>GAME</RootNamespace>
+    <AssemblyName>GAME</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GameClasses\ClientServer\CommadConverter.cs" />
+    <Compile Include="GameClasses\ClientServer\Sender.cs" />
+    <Compile Include="GameClasses\ClientServer\MyServer.cs" />
+    <Compile Include="GameClasses\Builder\Animeshnik.cs" />
+    <Compile Include="GameClasses\Builder\DeadInside.cs" />
+    <Compile Include="GameClasses\Builder\Lvasuk.cs" />
+    <Compile Include="GameClasses\Builder\PlayerConfiger.cs" />
+    <Compile Include="GameClasses\Builder\PZshnik.cs" />
+    <Compile Include="GameClasses\CommandPattern\Command.cs" />
+    <Compile Include="GameClasses\CommandPattern\LoadCommand.cs" />
+    <Compile Include="GameClasses\CommandPattern\Receiver.cs" />
+    <Compile Include="GameClasses\CommandPattern\SaveCommand.cs" />
+    <Compile Include="GameClasses\CommandPattern\SaveManager.cs" />
+    <Compile Include="GameClasses\Composite\IWorldComponent.cs" />
+    <Compile Include="GameClasses\Composite\LocationComponent.cs" />
+    <Compile Include="GameClasses\Composite\PortalComponent.cs" />
+    <Compile Include="GameClasses\ConsoleDEMOControler.cs" />
+    <Compile Include="GameClasses\ConsolePrinter.cs" />
+    <Compile Include="GameClasses\Decorator\DiscoDecorator.cs" />
+    <Compile Include="GameClasses\Decorator\DoserDecorator.cs" />
+    <Compile Include="GameClasses\Decorator\SuperWolfPlayer.cs" />
+    <Compile Include="GameClasses\Decorator\WolfPlayer.cs" />
+    <Compile Include="GameClasses\Locations\Location.cs" />
+    <Compile Include="GameClasses\Mediator\Logger.cs" />
+    <Compile Include="GameClasses\Mediator\Mediator.cs" />
+    <Compile Include="GameClasses\PlayerMemento\Caretaker.cs" />
+    <Compile Include="GameClasses\PlayerMemento\Memento.cs" />
+    <Compile Include="GameClasses\PlayerMemento\Originator.cs" />
+    <Compile Include="GameClasses\MenuDrawer.cs" />
+    <Compile Include="GameClasses\GameFacade.cs" />
+    <Compile Include="GameClasses\Decorator\PlayerDecorator.cs" />
+    <Compile Include="GameClasses\MenuHandler.cs" />
+    <Compile Include="GameClasses\QuestsManeger.cs" />
+    <Compile Include="GameClasses\StatePattern\QuestState\Active.cs" />
+    <Compile Include="GameClasses\StatePattern\QuestState\Available.cs" />
+    <Compile Include="GameClasses\StatePattern\QuestState\Completed.cs" />
+    <Compile Include="GameClasses\StatePattern\QuestState\Failed.cs" />
+    <Compile Include="GameClasses\StatePattern\QuestState\State.cs" />
+    <Compile Include="GameClasses\StatePattern\QuestState\Unavailable.cs" />
+    <Compile Include="GameClasses\SmallUi\SmallDarkUI.cs" />
+    <Compile Include="GameClasses\SoundPlayerSingletone.cs" />
+    <Compile Include="GameClasses\StatePattern\Quest.cs" />
+    <Compile Include="GameClasses\UIFactory\DarkUIFactory.cs" />
+    <Compile Include="GameClasses\UIFactory\LightUIFactory.cs" />
+    <Compile Include="GameClasses\UIMemento\Caretaker.cs" />
+    <Compile Include="GameClasses\UIMemento\Memento.cs" />
+    <Compile Include="GameClasses\UIMemento\Originator.cs" />
+    <Compile Include="GameClasses\WideUI\WideDarkUI.cs" />
+    <Compile Include="GameClasses\SmallUi\SmallLightUI.cs" />
+    <Compile Include="GameClasses\WideUI\WideLightUI.cs" />
+    <Compile Include="GameClasses\Map.cs" />
+    <Compile Include="GameClasses\SmallUi\ISmallUI.cs" />
+    <Compile Include="GameClasses\WideUI\IWideUI.cs" />
+    <Compile Include="Interfaces\IController.cs" />
+    <Compile Include="GameClasses\UIFactory\IuiFactory.cs" />
+    <Compile Include="Interfaces\IMap.cs" />
+    <Compile Include="Interfaces\IMenuDrawer.cs" />
+    <Compile Include="Interfaces\IUserInterface.cs" />
+    <Compile Include="GameClasses\Builder\PlayerBuilder.cs" />
+    <Compile Include="GameClasses\Player.cs" />
+    <Compile Include="GameClasses\Level.cs" />
+    <Compile Include="GameClasses\MapLazySingleton.cs" />
+    <Compile Include="GameClasses\MapSafeSingleton.cs" />
+    <Compile Include="Interfaces\ISaver.cs" />
+    <Compile Include="GameClasses\KeyListener.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GameClasses\Stats.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="GameClasses\Decorator\Disco.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="GameClasses\Decorator\WolfImage.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\i-am-dead-inside.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\i_am_ALIVE.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Im_the_map.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\lmfao-party.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\MenuOST.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\narutoVoice.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\shrek-oh-hello-there.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\Wolf.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
